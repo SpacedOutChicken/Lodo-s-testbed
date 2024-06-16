@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Check",
+        "cost": 1,
+        "uniques": ["Free [Worker] appears"]
+    }
+    /*{
+        "name": "Check 2",
+        "cost": 1,
+        "uniques": ["Costs [1] [Stuff]"]
+    }*/
+]

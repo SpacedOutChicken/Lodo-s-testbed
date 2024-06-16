@@ -1,0 +1,8 @@
+[
+    {
+		"name": "Stuff",
+		"resourceType": "Strategic",
+        "production": 1,
+		"uniques": ["City-level resource"]
+	}
+]

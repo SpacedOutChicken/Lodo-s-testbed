@@ -1,0 +1,13 @@
+[
+    {
+		"name": "Stuff maker",
+		"terrainsCanBeBuiltOn": ["Land"],
+		"food": 1,
+		"turnsToBuild": 1,
+		"uniques": [
+			"Provides [1] [Stuff] <in [non-[Fresh water]] tiles>",
+            "Pillaging this improvement yields approximately [+18 Gold]"
+		],
+		"shortcutKey": "Y"
+	}
+]

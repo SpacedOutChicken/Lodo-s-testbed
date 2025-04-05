@@ -9,9 +9,9 @@
 			"Provides [1] [Power]",
 			"[+1 Production] from [Fresh water] tiles",
 			"[+1 Gold] <after discovering [Heat Shields]>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Unbuildable <in [resource] tiles>",
+			"[-1 Production, -1 Food] <in [resource] tiles>",
 			"Costs [2] [Parts] <(modified by game speed)>"
 		],
 		"shortcutKey": "H",
@@ -33,12 +33,10 @@
 		"terrainsCanBeBuiltOn": ["Hill"],
 		"techRequired": "Ore Mining",
 		"production": 1,
-		"gold": 1,
 		"turnsToBuild": 7,
 		"uniques": [
 			"Pillaging this improvement yields approximately [+10 Gold]",
 			"[+1 Production] <after discovering [Planetary Engineering]>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Parts]",
 			"Provides [1] [Power] <in tiles adjacent to [Fresh water] tiles>"
@@ -65,12 +63,11 @@
 			"Can only be built to improve a resource",
 			"Pillaging this improvement yields approximately [+10 Gold]",
 			"[+1 Production] <after discovering [Planetary Engineering]>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Parts]",
 			"Provides [1] [Power] <in tiles adjacent to [Fresh water] tiles>",
-			"Provides [1] [Oxygen] <for [Human] Civilizations> <in [Oxides] tiles>",
-			"Cannot be built on [Lava] tiles"
+			"Cannot be built on [Lava] tiles <before discovering [Geophysics]>",
+			"Turn this tile into a [Crust] tile <in [Lava] tiles>"
 		],
 		"shortcutKey": "Q",
 		"civilopediaText": [
@@ -97,11 +94,11 @@
 			"Pillaging this improvement yields approximately [+10 Gold]",
 			"[+1 Gold] <after discovering [Heat Shields]>",
 			"[+1 Production, +1 Gold] <after discovering [Planetary Engineering]>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Power]",
 			"Provides [1] [Weight]",
 			"Provides [1] [Parts]",
-			"Must be next to [River]"
+			"Must be next to [River]",
+			"Unbuildable <in [resource] tiles>"
 		],
 		"shortcutKey": "L",
 		"civilopediaText": [
@@ -125,7 +122,6 @@
 			"Can only be built to improve a resource",
 			"Turn this tile into a [Crust] tile",
 			"Pillaging this improvement yields approximately [+10 Gold]",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Power]",
 			"Provides [1] [Parts]"
@@ -148,12 +144,11 @@
 		"name": "Magma extractor",
 		"turnsToBuild": 8,
 		"techRequired": "Raw Materials",
-		"production": 4,
+		"production": 3,
 		"terrainsCanBeBuiltOn": ["Vent"],
 		"uniques": [
 			"Pillaging this improvement yields approximately [+20 Gold]",
 			"[+1 Production, +1 Gold] <after discovering [Planetary Engineering]>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [2] [Power]",
 			"Provides [1] [Weight]",
 			"Provides [1] [Parts]"
@@ -173,15 +168,42 @@
 		]
 	},
 	{
+		"name": "Fissure cap",
+		"turnsToBuild": 8,
+		"techRequired": "Raw Materials",
+		"production": 3,
+		"terrainsCanBeBuiltOn": ["Fissure"],
+		"uniques": [
+			"Pillaging this improvement yields approximately [+20 Gold]",
+			"[+1 Production, +1 Gold] <after discovering [Planetary Engineering]>",
+			"Provides [2] [Power]",
+			"Provides [1] [Weight]",
+			"Provides [1] [Parts]"
+		],
+		"shortcutKey": "C",
+		"civilopediaText": [
+			{
+				"extraImage": "TileSets/FantasyHex/Tiles/Fissure cap",
+				"imageSize": 64
+			},
+			{
+				"Separator": true
+			},
+			{
+				"text": "Simple but sturdy caps on lava channels to harvest geothermal power."
+			}
+		]
+	},
+	{
 		"name": "Core extractor",
 		"turnsToBuild": 8,
 		"techRequired": "Deep Extraction",
 		"terrainsCanBeBuiltOn": ["Forsterite","Basalt","Silicate","Sulfur","Hydrated rock","Borehole"],
 		"uniques": [
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [2] [Power]",
 			"Provides [1] [Weight]",
 			"Provides [1] [Parts]",
+			"Costs [2] [Parts] <(modified by game speed)>",
 			"Turn this tile into a [Borehole] tile",
 			"[+2 Gold, +2 Production, +1 Food] <in tiles not adjacent to [Borehole] tiles>",
 			"[+1 Gold, +1 Production, +1 Food] <in [Borehole] tiles> <in tiles not adjacent to [Borehole] tiles>",
@@ -189,6 +211,7 @@
 			"Unavailable <in [resource] tiles>",
 			"Unavailable <in tiles adjacent to [Borehole] tiles>",
 			"Unavailable <in tiles adjacent to [City center] tiles>",
+			"Unbuildable <in tiles adjacent to [River] tiles>",
 			"Pillaging this improvement yields approximately [+20 Gold]"
 		],
 		"shortcutKey": "C",
@@ -201,7 +224,7 @@
 				"Separator": true
 			},
 			{
-				"text": "These installations can channel the power they draw into firepower, making them useful defensive measures as well as power sources."
+				"text": "These installations can channel the energy they draw into firepower, making them useful defensive measures as well as power sources."
 			}
 		]
 	},
@@ -216,9 +239,9 @@
 			"Provides [2] [Power]",
 			"Provides [1] [Parts]",
 			"Provides [1] [Weight]",
+			"Costs [2] [Parts] <(modified by game speed)>",
 			"Turn this tile into a [Crust] tile",
 			"[+2 Gold, +2 Production, +2 Food] <in tiles not adjacent to [Cauldron facility] tiles>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Unavailable <in [resource] tiles>",
 			"Unavailable <in tiles adjacent to [Cauldron facility] tiles>",
 			"Unavailable <in tiles adjacent to [City center] tiles>",
@@ -242,19 +265,19 @@
 		"name": "Air harvester",
 		"uniqueTo": "Human",
 		"terrainsCanBeBuiltOn": ["Land"],
+		"food": 1,
+		"gold": 1,
 		"turnsToBuild": 6,
 		"uniques": [
 			"Pillaging this improvement yields approximately [+10 Gold]",
 			"Provides [1] [Power]",
-			"Provides [1] [Oxygen] <for [Human] Civilizations>",
+			"Provides [1] [Oxygen]",
 			"[+1 Production] from [Fresh water] tiles",
 			"[+1 Gold] <after discovering [Heat Shields]>",
-			"[+1 Food] <after discovering [Molecular Machines]>",
-			"[+1 Food, +1 Production, +1 Gold] <for [Human] Civilizations>",
 			"Provides [1] [Weight]",
-			"Improves [Bonus] resource in this tile",
+			"Improves [Luxury] resource in this tile",
+			"Improves [Oxygen] resource in this tile",
 			"Unbuildable <in [Strategic resource] tiles>",
-			"Unbuildable <in [Luxury resource] tiles>",
 			"Unavailable <in tiles adjacent to [Air harvester] tiles>",
 			"Cannot be built on [Lava] tiles",
 			"Costs [2] [Parts] <(modified by game speed)>"
@@ -270,6 +293,43 @@
 			},
 			{
 				"text": "These installations pressurize the thin air around Io and harvest oxygen from the ground and atmosphere, hopefully providing enough for any humans who want to live here."
+			}
+		]
+	},
+	{
+		"name": "Wildcat well",
+		"uniqueTo": "Wildcatters",
+		"terrainsCanBeBuiltOn": ["Land","Crust","Lava","Vent"],
+		"techRequired": "Raw Materials",
+		"food": 1,
+		"production": 1,
+		"turnsToBuild": 6,
+		"uniques": [
+			"Pillaging this improvement yields approximately [+10 Gold]",
+			"Provides [1] [Power]",
+			"Provides [1] [Parts]",
+			"[+1 Production] from [Fresh water] tiles",
+			"[+1 Production] <in [Vent] tiles>",
+			"[+1 Gold] <after discovering [Heat Shields]>",
+			"Provides [1] [Weight]",
+			"Improves [any] resource in this tile",
+			"Unavailable <in tiles adjacent to [Wildcat well] tiles>",
+			"Cannot be built on [Lava] tiles <before discovering [Geophysics]>",
+			"Turn this tile into a [Crust] tile <in [Lava] tiles>",
+			"Can be built just outside your borders",
+			"Gain control over [{non-[Major]} {non-[City-State]}] tiles in a [0]-tile radius"
+		],
+		"shortcutKey": "W",
+		"civilopediaText": [
+			{
+				"extraImage": "TileSets/FantasyHex/Tiles/Wildcat well",
+				"imageSize": 64
+			},
+			{
+				"Separator": true
+			},
+			{
+				"text": "These experimental wells can find resources just about anywhere."
 			}
 		]
 	},
@@ -383,7 +443,7 @@
 	{
 		"name": "Create Crust",
 		"terrainsCanBeBuiltOn": ["Lava"],
-		"techRequired": "Chemical Engineering",
+		"techRequired": "Geophysics",
 		"turnsToBuild": 2,
 		"uniques": [
 			"Can be built outside your borders",
@@ -458,7 +518,6 @@
 			"Great Improvement",
 			"Removes removable features when built",
 			"Pillaging this improvement yields approximately [+10 Gold, +10 Science]",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Power]",
 			"Provides [1] [Parts]",
@@ -487,7 +546,6 @@
 			"Great Improvement",
 			"Removes removable features when built",
 			"Pillaging this improvement yields approximately [+10 Gold, +10 Science]",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Power]",
 			"Will not be replaced by automated units",
@@ -515,7 +573,6 @@
 			"Great Improvement",
 			"Removes removable features when built",
 			"Pillaging this improvement yields approximately [+10 Gold, +10 Science]",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Power]",
 			"Will not be replaced by automated units",
@@ -543,7 +600,6 @@
 			"Great Improvement",
 			"Removes removable features when built",
 			"Pillaging this improvement yields approximately [+10 Science, +10 Gold]",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Provides [1] [Weight]",
 			"Provides [1] [Power]",
 			"Will not be replaced by automated units",
@@ -570,7 +626,6 @@
 			"Great Improvement",
 			"Gives a defensive bonus of [100]%",
 			"Adjacent enemy units ending their turn take [30] damage",
-			"[+1 Food] <after discovering [Molecular Machines]>",
 			"Can be built just outside your borders",
         	"Gain control over [All] tiles in a [1]-tile radius",
 			"Removes removable features when built",
